@@ -1,9 +1,11 @@
 {% extends "_base.html" %}
 {% load static %}
 
+
 {% block title %}
-  {{ blogdetails }}
+  {{ post.title }}
 {% endblock title %}
+
 
 {% block head %}
 <h1>Blog Details</h1>
@@ -25,3 +27,16 @@
     }
   </style>
 {% endblock head %}
+
+{% block content %}
+ <h1>{{ blog.title }}</h1>
+ <p class="date">
+ Published {{ post.publish }}
+ </p>
+ {{ post.text|linebreaks }}
+
+<h1>{{ post.title }}</h1>
+<p>{{ post.text }}</p>
+<p>Created on: {{ post.created_on }}</p>
+
+{% endblock %}
