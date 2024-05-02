@@ -12,3 +12,15 @@ def HomeView(request):
         context
 
     )
+
+
+def AboutView(request):
+    context = dict(
+        page_title='About us'
+    )
+    return render(
+        request,
+        'about.html',
+        context
+
+    )

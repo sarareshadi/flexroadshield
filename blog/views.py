@@ -6,7 +6,7 @@ def BlogList(request):
     posts = BlogPost.objects.all()   
     return render(
     request, 
-    'bloglist.html', 
+    'blog/bloglist.html', 
     {'posts': posts},
     )
 
@@ -14,6 +14,6 @@ def BlogDetails(request,id):
     post = get_object_or_404(BlogPost, id = id, status = BlogPost.Status.PUBLISHED)
     return render (
         request,
-        'blogdetails.html',
+        'blog/blogdetails.html',
         {'post': post},
     )
