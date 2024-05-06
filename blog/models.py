@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.utils.text import slugify
+from django.db import IntegrityError
 
 class BlogPost(models.Model):
     class Status(models.TextChoices):
@@ -14,12 +15,13 @@ class BlogPost(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
     image = models.ImageField(upload_to='blog_images/', default='default.jpg')
     status = models.CharField(max_length=2, choices=Status.choices,default=Status.DRAFT)
-
+    slug = models.SlugField(unique=True, blank=True)
     class Meta:
         ordering = ['-published_date']
 
     def __str__(self):
         return self.title
+
 
 
 class Category(models.Model):

@@ -10,8 +10,8 @@ def BlogList(request):
     {'posts': posts},
     )
 
-def BlogDetails(request,id):
-    post = get_object_or_404(BlogPost, id = id, status = BlogPost.Status.PUBLISHED)
+def BlogDetails(request,slug):
+    post = get_object_or_404(BlogPost, slug=slug, status = BlogPost.Status.PUBLISHED)
     return render (
         request,
         'blog/blogdetails.html',
