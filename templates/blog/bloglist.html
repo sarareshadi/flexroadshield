@@ -6,7 +6,8 @@
 {% endblock title %}
 
 {% block head %}
-<h1>Blog list</h1>
+<h1>Blog</h1>
+
   <style>
     .container-s {
         position: relative;        
@@ -29,6 +30,7 @@
 {% block content %}
   
 {% for post in posts %}
+
 <a href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
 <p>{{ post.text }}</p>
 <img src="{{ post.image.url }}" alt="Description">
