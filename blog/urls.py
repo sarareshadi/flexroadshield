@@ -5,7 +5,7 @@ app_name = 'blog'
 
 urlpatterns = [
 path('', views.BlogList, name= 'blog_home'),   
-# path('bloglist/', views.BlogList, name='bloglist'),
-path('blogdetails/<int:id>/', views.BlogDetails, name='blogdetails'),
+#path('bloglist/', views.BlogList, name='bloglist'),
+path('blogdetails/<slug:slug>/', views.BlogDetails, name='blogdetails'),
 
 ]

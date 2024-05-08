@@ -29,8 +29,9 @@
 {% block content %}
   
 {% for post in posts %}
-<a href="{% url 'blog:blogdetails' post.id %}">{{ post.title }}</a>
+<a href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
 <p>{{ post.text }}</p>
+<img src="{{ post.image.url }}" alt="Description">
 <p class="date">
   Published {{ post.published_date }}
   {{ post.text|truncatewords:30|linebreaks }}

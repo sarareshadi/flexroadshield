@@ -4,12 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
 pillow = "*"
 psycopg2-binary = "*"
 gunicorn = "*"
 uvicorn = "*"
 crispy-bootstrap4 = "*"
+django = "==5.0.4"
 
 [dev-packages]
 
