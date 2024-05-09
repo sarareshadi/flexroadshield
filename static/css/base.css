@@ -1,0 +1,20 @@
+body {
+    background-color: #124c86;
+    padding: 0;
+    margin: 0;
+    color: #fcbb21;
+}
+
+.container-s {
+    position: relative;        
+}
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+
+.navbar-custom {
+    background-color: #f0583a; /* Custom background color */
+}

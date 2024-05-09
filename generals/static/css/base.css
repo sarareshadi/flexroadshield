@@ -1,0 +1,15 @@
+body {
+    background-color: #1a1a1a;
+    padding: 0;
+    margin: 0;
+    color: #fcbb21;
+}
+
+.container-s {
+    position: relative;        
+}
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
