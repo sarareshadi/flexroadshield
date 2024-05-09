@@ -40,7 +40,7 @@ def ProjectsView(request):
     )
     return render(
         request,
-        'Projects.html',
+        'projects.html',
         context
     )
 
