@@ -1,0 +1,19 @@
+/*styles.css*/
+body {
+    background-color: #124c86;
+}
+
+.navbar-custom {
+    background-color: #f0583a; /* Custom background color */
+    border-radius: 0; /* No rounded corners */
+    }
+    
+    .navbar-custom .nav-link {
+    color: #fff; /* White text for links */
+    }
+    
+    .navbar-custom .nav-link:hover {
+    color: #d9534f; /* Change color on hover */
+    }
+
+        
