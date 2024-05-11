@@ -1,48 +1,32 @@
 
  <nav class="navbar navbar-expand-lg row justify-content-md-center p-5 mb-2 font-weight-bold me-auto mb-2 mb-lg-0 navbar-custom">
     <div class="container-fluid ">
-      <a class="navbar-brand" style="color: white;" href="#">FlexRoadShield</a>
+      <a class="navbar-brand nav-link" style="color: white;" href="#">FlexRoadShield</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+        </button>
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mx-auto mb-5 mb-lg-0">
           <li class="nav-item">
-            <a href="{% url 'generals:home' %}">HOME</a>
+            <a href="{% url 'generals:home' %}" class="nav-link">HOME</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'generals:about' %}">ABOUT US</a>
+            <a href="{% url 'generals:about' %}" class="nav-link">ABOUT US</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'generals:projects' %}">PROJECTS</a>
+            <a href="{% url 'generals:projects' %}" class="nav-link">PROJECTS</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'generals:services' %}">SERVICES</a>
+            <a href="{% url 'generals:services' %}" class="nav-link">SERVICES</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'blog:blog_home' %}">BLOG</a>
+            <a href="{% url 'blog:blog_home' %}" class="nav-link">BLOG</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'generals:contact' %}">CONTACT US</a>
+            <a href="{% url 'generals:contact' %}" class="nav-link">CONTACT US</a>
           </li>
-          {% comment %}
-            
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Home</a></li>
-              <li><a class="dropdown-item" href="#">blog</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">contactus</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
+
+        {% comment %}
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>

@@ -24,11 +24,5 @@ body {
     text-decoration: none;
 }
 
-.navbar-custom a:hover {
-    filter: brightness(50%);
-}
 
-.navbar-custom a:active, a.open {
-    color: gray;
-}
 
