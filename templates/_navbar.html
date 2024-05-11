@@ -1,5 +1,5 @@
 
- <nav class="navbar navbar-expand-lg row justify-content-md-center p-5 mb-2 font-weight-bold bg-warning me-auto mb-2 mb-lg-0 navbar-custom">
+ <nav class="navbar navbar-expand-lg row justify-content-md-center p-5 mb-2 font-weight-bold me-auto mb-2 mb-lg-0 navbar-custom">
     <div class="container-fluid ">
       <a class="navbar-brand" style="color: white;" href="#">FlexRoadShield</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,22 +8,22 @@
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mx-auto mb-5 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link link-opacity-50-hover" style="color: white;" onclick="this.style.color='gray'" href="{% url 'generals:home' %}">HOME</a>
+            <a href="{% url 'generals:home' %}">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-opacity-50-hover" style="color: white;" href="{% url 'generals:about' %}">ABOUT US</a>
+            <a href="{% url 'generals:about' %}">ABOUT US</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-opacity-50-hover" style="color: white;" href="{% url 'generals:projects' %}">PROJECTS</a>
+            <a href="{% url 'generals:projects' %}">PROJECTS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-opacity-50-hover" style="color: white;" href="{% url 'generals:services' %}">SERVICES</a>
+            <a href="{% url 'generals:services' %}">SERVICES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-opacity-50-hover" style="color: white;" href="{% url 'blog:blog_home' %}">BLOG</a>
+            <a href="{% url 'blog:blog_home' %}">BLOG</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-opacity-50-hover" style="color: white;" href="{% url 'generals:contact' %}">CONTACT US</a>
+            <a href="{% url 'generals:contact' %}">CONTACT US</a>
           </li>
           {% comment %}
             
@@ -33,10 +33,10 @@
               Dropdown
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Home</a></li>
+              <li><a class="dropdown-item" href="#">blog</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">contactus</a></li>
             </ul>
           </li>
           <li class="nav-item">
