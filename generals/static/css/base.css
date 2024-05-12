@@ -6,10 +6,33 @@ body {
 }
 
 .container-s {
-    position: relative;        
+    position: relative;
 }
 .logo {
     position: absolute;
     left: 50px;
     top: 50px;
 }
+
+.navbar-custom {
+    background-color: #fcbb21; /* Custom background color */
+}
+
+.navbar-custom a{
+    margin-right: 20px;
+    color: rgb(244, 248, 253);
+    text-decoration: none;
+}
+
+.footer-custom {
+    background-color: #fcbb21; /* Custom background color */
+
+}
+
+.footer-custom a{
+    margin-right: 20px;
+    color: rgb(244, 248, 253);
+    text-decoration: none;
+}
+
+
