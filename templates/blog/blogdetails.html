@@ -28,15 +28,29 @@
 {% endblock head %}
 
 {% block content %}
- <h1>{{ blog.title }}</h1>
- <p class="date">
- Published {{ post.publish }}
- </p>
- {{ post.text|linebreaks }}
+<section class="bsb-blog-5 py-3 py-md-5 py-xl-8 text-white">
+  <div class="container overflow-hidden">
+    <div class="row column-gap-3 gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9 d-flex justify-content-center ">
+      <div class=" ol-lg-1 bg-light d-flex justify-content-center">
+        <article>
+          <div class="card border-0 bg-transparent">
+            <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+              <a href="{% url 'blog:blogdetails' post.slug %}">
+                <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="{{ post.image.url }}" alt="Description">
+              </a>
+            </figure>
+            <div class="card-body m-0 p-0 ">
+              <div class="entry-header mb-3">
+                <h1 class="card-title entry-title h4 m-0">
+                    {{ post.title }}
+                </h1>
+                <p class="date">Published {{ post.published_date }}</p>
+                <br>
+                <p class="">{{ post.text }}</p>
+              </div>
+            </div>
 
-<h1>{{ post.title }}</h1>
-<img src="{{ post.image.url }}" alt="Description">
-<p>{{ post.text }}</p>
-<p>Created on: {{ post.created_on }}</p>
-
+          </div>
+        </article>
+      </div>
 {% endblock %}
