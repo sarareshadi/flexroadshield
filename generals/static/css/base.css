@@ -25,8 +25,15 @@ body {
 }
 
 .footer-custom {
-    background-color: #fcbb21; /* Custom background color */
+    background-color: #fcbb21;
+    position: fixed;
+	width: 100%;
+	bottom: -200px;
+	display: block;
+}
 
+.footer-custom:hover {
+    bottom: 0;
 }
 
 .footer-custom a{
@@ -34,5 +41,3 @@ body {
     color: rgb(244, 248, 253);
     text-decoration: none;
 }
-
-
