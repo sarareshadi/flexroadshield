@@ -22,18 +22,6 @@ def AboutView(request):
         context
     )
 
-
-def ContactView(request):
-    context = dict(
-        page_title='Contact Us'
-    )
-    return render(
-        request,
-        'contact.html',
-        context
-    )
-
-
 def ProjectsView(request):
     context = dict(
         page_title='Projects'
