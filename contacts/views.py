@@ -7,7 +7,8 @@ def ContactsView(request):
         form = ContactForm(request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('contacts:contacts')
+            messages.success(request, 'We received your message!')
+            return redirect('generals:home')
         
     else:
         form = ContactForm()
@@ -15,5 +16,5 @@ def ContactsView(request):
     return render(
         request, 
         'contact.html', 
-        {'form': form},
+        {'form': form}
     )   
