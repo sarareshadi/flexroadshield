@@ -7,7 +7,6 @@ def ContactsView(request):
         form = ContactForm(request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'We received your message!')
             return redirect('generals:home')
         
     else:
