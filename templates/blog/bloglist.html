@@ -19,7 +19,7 @@
           <div class="card border-0 bg-transparent">
             <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
               <a href="{% url 'blog:blogdetails' post.slug %}">
-                <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="{{ post.image.url }}">
+                <img class="img-fluid bsb-scale bsb-hover-scale-up w-100 mx-auto p-2" loading="lazy" src="{{ post.image.url }}">
               </a>
             </figure>
             <div class="card-body m-0 p-0 ">
@@ -37,54 +37,6 @@
         </article>
       </div>
       {% if forloop.counter|divisibleby:3 and not forloop.last %}
-    </div>
-      <div class="col-12 col-lg-3 bg-warning ">
-        <article>
-          <div class="card border-0 bg-transparent">
-            <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-              <a href="{% url 'blog:blogdetails' post.slug %}">
-                <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="{{ post.image.url }}">
-              </a>
-            </figure>
-            <div class="card-body m-0 p-0 ">
-              <div class="entry-header mb-3">
-                <h3 class="card-title entry-title h4 m-0">
-                  <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
-                </h3>
-                <p class="text-light">{{ post.text|truncatechars:100 }}</p>
-              </div>
-            </div>
-            <div class="card-footer border-0 bg-transparent p-0 m-0">
-              <p class="text-light date">Published {{ post.published_date }}</p>
-            </div>
-          </div>
-        </article>
-      </div>
-      </div>
-
-      <div class="col-12 col-lg-3 bg-warning ">
-        <article>
-          <div class="card border-0 bg-transparent">
-            <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-              <a href="{% url 'blog:blogdetails' post.slug %}">
-                <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="{{ post.image.url }}">
-              </a>
-            </figure>
-            <div class="card-body m-0 p-0 ">
-              <div class="entry-header mb-3">
-                <h3 class="card-title entry-title h4 m-0">
-                  <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
-                </h3>
-                <p class="text-light">{{ post.text|truncatechars:100 }}</p>
-              </div>
-            </div>
-            <div class="card-footer border-0 bg-transparent p-0 m-0">
-              <p class="text-light date">Published {{ post.published_date }}</p>
-            </div>
-          </div>
-        </article>
-      </div>
-      </div>
       {% endif %}
       {% endfor %}
     </div>
