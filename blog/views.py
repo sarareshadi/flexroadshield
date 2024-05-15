@@ -3,7 +3,7 @@ from django.http import Http404
 from .models import BlogPost 
 
 def BlogList(request):
-    posts = BlogPost.objects.all()   
+    posts = BlogPost.objects.filter(status='PB')   
     return render(
     request, 
     'blog/bloglist.html', 
