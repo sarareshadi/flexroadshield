@@ -27,7 +27,7 @@
                 <h3 class="card-title entry-title h4 m-0">
                   <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
                 </h3>
-                <p class="text-light">{{ post.text }}</p>
+                <p class="text-light">{{ post.text|truncatechars:100 }}</p>
               </div>
             </div>
             <div class="card-footer border-0 bg-transparent p-0 m-0">
@@ -51,7 +51,7 @@
                 <h3 class="card-title entry-title h4 m-0">
                   <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
                 </h3>
-                <p class="text-light">{{ post.text }}</p>
+                <p class="text-light">{{ post.text|truncatechars:100 }}</p>
               </div>
             </div>
             <div class="card-footer border-0 bg-transparent p-0 m-0">
@@ -75,7 +75,7 @@
                 <h3 class="card-title entry-title h4 m-0">
                   <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
                 </h3>
-                <p class="text-light">{{ post.text }}</p>
+                <p class="text-light">{{ post.text|truncatechars:100 }}</p>
               </div>
             </div>
             <div class="card-footer border-0 bg-transparent p-0 m-0">
