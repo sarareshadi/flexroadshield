@@ -42,12 +42,20 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container py-4">
     <div class="row">
       <div class="col text-center">
-        <a href="?page={{ posts.next_page_number}}" class="btn bsb-btn-2xl btn-warning rounded-pill mt-5 mt-xl-10">
-          <span>Next Page</span>
-        </a>
+        {% if posts.has_previous %}
+        <a href="?page=1" class="btn bsb-btn-2xl btn-warning rounded-pill mt-xl-10">&laquo; First</a>
+        <a href="?page={{ posts.previous_page_number }}" class="btn bsb-btn-2xl btn-warning rounded-pill mt-xl-10">  Previous</a>
+        {% endif %}
+        <span class="current">
+          Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+        </span>
+        {% if posts.has_next %}
+        <a href="?page={{ posts.next_page_number}}" class="btn bsb-btn-2xl btn-warning rounded-pill mt-xl-10"><span>Next Page</span></a>
+        <a href="?page={{ posts.paginator.num_pages }}" class="btn bsb-btn-2xl btn-warning rounded-pill mt-xl-10">Last &raquo;</a>
+        {% endif %}
     </div>
   </div>
 </section>
