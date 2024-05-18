@@ -10,18 +10,16 @@
 {% endblock head %}
 
 {% block content %}
-
-{% for post in posts %}
 <section class="bsb-blog-5 py-3 py-md-5 py-xl-8 text-white">
   <div class="container overflow-hidden">
     <div class="row column-gap-3 gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9 d-flex justify-content-center ">
-
+      {% for post in posts %}
       <div class="col-12 col-lg-3 bg-warning ">
         <article>
           <div class="card border-0 bg-transparent">
             <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
               <a href="{% url 'blog:blogdetails' post.slug %}">
-                <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="{{ post.image.url }}">
+                <img class="img-fluid bsb-scale bsb-hover-scale-up w-100 mx-auto p-2" loading="lazy" src="{{ post.image.url }}">
               </a>
             </figure>
             <div class="card-body m-0 p-0 ">
@@ -29,7 +27,7 @@
                 <h3 class="card-title entry-title h4 m-0">
                   <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
                 </h3>
-                <p class="text-light">{{ post.text }}</p>
+                <p class="text-light">{{ post.text|truncatechars:100 }}</p>
               </div>
             </div>
             <div class="card-footer border-0 bg-transparent p-0 m-0">
@@ -38,61 +36,18 @@
           </div>
         </article>
       </div>
-
-      <div class="col-12 col-lg-3 bg-warning ">
-        <article>
-          <div class="card border-0 bg-transparent">
-            <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-              <a href="{% url 'blog:blogdetails' post.slug %}">
-                <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="{{ post.image.url }}">
-              </a>
-            </figure>
-            <div class="card-body m-0 p-0 ">
-              <div class="entry-header mb-3">
-                <h3 class="card-title entry-title h4 m-0">
-                  <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
-                </h3>
-                <p class="text-light">{{ post.text }}</p>
-              </div>
-            </div>
-            <div class="card-footer border-0 bg-transparent p-0 m-0">
-              <p class="text-light date">Published {{ post.published_date }}</p>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-12 col-lg-3 bg-warning ">
-        <article>
-          <div class="card border-0 bg-transparent">
-            <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-              <a href="{% url 'blog:blogdetails' post.slug %}">
-                <img class="img-fluid bsb-scale bsb-hover-scale-up" loading="lazy" src="{{ post.image.url }}">
-              </a>
-            </figure>
-            <div class="card-body m-0 p-0 ">
-              <div class="entry-header mb-3">
-                <h3 class="card-title entry-title h4 m-0">
-                  <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
-                </h3>
-                <p class="text-light">{{ post.text }}</p>
-              </div>
-            </div>
-            <div class="card-footer border-0 bg-transparent p-0 m-0">
-              <p class="text-light date">Published {{ post.published_date }}</p>
-            </div>
-          </div>
-        </article>
-      </div>
+      {% if forloop.counter|divisibleby:3 and not forloop.last %}
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
-  {% endfor %}
 
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <a href="#!" class="btn bsb-btn-2xl btn-warning rounded-pill mt-5 mt-xl-10">All Posts Blog</a>
-      </div>
+        <a href="?page={{ posts.next_page_number}}" class="btn bsb-btn-2xl btn-warning rounded-pill mt-5 mt-xl-10">
+          <span>Next Page</span>
+        </a>
     </div>
   </div>
 </section>

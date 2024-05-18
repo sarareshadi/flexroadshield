@@ -15,7 +15,7 @@ class BlogPost(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
     image = models.ImageField(upload_to='blog_images/', default='default.jpg')
     status = models.CharField(max_length=2, choices=Status.choices,default=Status.DRAFT)
-    slug = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField(unique=True, blank=False, null=False)
     class Meta:
         ordering = ['-published_date']
 

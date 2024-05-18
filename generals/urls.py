@@ -8,7 +8,6 @@ app_name = 'generals'
 urlpatterns = [
     path('', views.HomeView, name='home'),
     path('about/', views.AboutView, name='about'),
-    path('contact/', views.ContactView, name='contact'),
     path('projects/', views.ProjectsView, name='projects'),
     path('services/', views.ServicesView, name='services'),
 ]
