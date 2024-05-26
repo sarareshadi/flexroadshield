@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+{# {% extends "_base.html" %} #}
+{% load i18n %}
+{% load static %}
+
+{% block title %}404 | {% trans 'FlexRoadShield' %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-4 text-center">
+        <h1 class="">{% trans '404 Error!' %}</h1>
+    </div> 
+
+    <div class="row mt-5 pt-5 text-center">
+        <div class="col-md-12 ">
+            <h2 class="Text-warning center">{% trans 'Oops! There is nothing here!' %}</h2>
+            <a href="{% url 'generals:home' %}" class="btn bg-warning link-light my-5 ">{% trans 'Home' %}</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
