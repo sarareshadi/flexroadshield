@@ -1,5 +1,5 @@
 body {
-    background-color: #124c86;
+    background-color: #000000;
     padding: 0;
     margin: 0;
     color: #fcbb21;
@@ -16,5 +16,25 @@ body {
 
 
 .navbar-custom {
-    background-color: #f0583a; /* Custom background color */
+    background-color: #fcbb21;
+}
+
+.footer-custom {
+    background-color: #fcbb21;
+    position: fixed;
+	width: 100%;
+	bottom: -100px;
+	display: block;
+    transition: bottom 0.6s;
+}
+
+.footer-custom:hover {
+    bottom: 0;
+}
+
+.footer-custom a{
+    background-color: #fcbb21;
+    margin-right: 20px;
+    color: rgb(244, 248, 253);
+    text-decoration: none;
 }
