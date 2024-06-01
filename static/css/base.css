@@ -1,21 +1,23 @@
 body {
-    background-color: #010101;
+    background-color: #000000;
     padding: 0;
     margin: 0;
-    color: #ffc300;
+    color: #f8cb58;
 }
 
 
-.color-navfooter {
-    background-color: #ffc300;
+.navfooter {
+    position: fixed;
+	width: 100%;
+    background-color: #f8cb58;
 }
 
-.color-navfooter a {
-    color: #2c2c2c;
+.navfooter a {
+    color: #696965;
 }
 
-.color-navfooter a:hover {
-    color: #010101;
+.navfooter a:hover {
+    color: #000000;
     }
 
 
@@ -29,8 +31,6 @@ body {
 }
 
 .footer-custom {
-    position: fixed;
-	width: 100%;
 	bottom: -100px;
 	display: block;
     transition: bottom 0.6s;
