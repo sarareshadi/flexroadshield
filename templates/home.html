@@ -22,54 +22,54 @@
             <h1>
                 FlexRoadShield 
               </h1>
-              <h3>Flexible road barrier shield</h3>
+              <h4>Flexible road barrier shield</h4>
         </div>
         <hr>
   </div>
   <div class="container text-center">
     <div class="row">
       <h1> Latest Blog Posts </h1>  
-  <section class="bsb-blog-5 py-3 py-md-5 py-xl-8 text-white bg-light">
-    <div class="container overflow-hidden">
-      <div class="row column-gap-3 gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9 d-flex justify-content-center ">
-        {% for post in posts %}
-        <div class="col-12 col-lg-3 bg-warning ">
-          <article>
-            <div class="card border-0 bg-transparent">
-              <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-                <a href="{% url 'blog:blogdetails' post.slug %}">
-                  <img class="img-fluid bsb-scale bsb-hover-scale-up w-100 mx-auto p-2" loading="lazy" src="{{ post.image.url }}">
-                </a>
-              </figure>
-              <div class="card-body m-0 p-0 ">
-                <div class="entry-header mb-3">
-                  <h3 class="card-title entry-title h4 m-0">
-                    <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
-                  </h3>
-                  <p class="text-light">{{ post.text|truncatechars:100 }}</p>
+      <section class="bsb-blog-5 py-3 py-md-5 py-xl-8 Coloryellowblack">
+        <div class="container overflow-hidden">
+          <div class="row column-gap-3 gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9 d-flex justify-content-center ">
+            {% for post in posts %}
+            <div class="col-12 col-lg-3 rounded Bglight">
+              <article>
+                <div class="card card-0 border-0 bg-transparent">
+                  <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
+                    <a href="{% url 'blog:blogdetails' post.slug %}">
+                      <img class="img-fluid bsb-scale bsb-hover-scale-up w-100 mx-auto p-2" loading="lazy" src="{{ post.image.url }}">
+                    </a>
+                  </figure>
+                  <div class="card-body m-0 p-0 Bglight">
+                    <div class="entry-header mb-3">
+                      <h3 class="card-title entry-title h4 m-0 pb-4">
+                        <a class="text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
+                      </h3>
+                      <p class="">{{ post.text|truncatechars:100 }}</p>
+                    </div>
+                  </div>
+                  <div class="card-footer border-0 bg-transparent m-0 Bglight pt-2">
+                    <p class=" date text-muted"><small>Published {{ post.published_date }}</small></p>
+                  </div>
                 </div>
-              </div>
-              <div class="card-footer border-0 bg-transparent p-0 m-0">
-                <p class="text-light date">Published {{ post.published_date }}</p>
-              </div>
+              </article>
             </div>
-          </article>
+            {% if forloop.counter|divisibleby:3 and not forloop.last %}
+            {% endif %}
+            {% endfor %}
+          </div>
         </div>
-        {% if forloop.counter|divisibleby:3 and not forloop.last %}
-        {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
+      </section>
     </div>
   </div>
 <div class="container text-center">
     <hr>
     <div class="row" style="padding-bottom: 15%;">
-      <h3>We make the world a safer place </h3>
+      <h4>We make the world a safer place </h4>
       <div class="col text-center">
-        <a href="{% url 'generals:services' %}" class="text-white btn bsb-btn-2xl bg-warning rounded-pill mt-5 mt-xl-10">Our Services</a>
-        <a href="{% url 'generals:projects' %}" class="text-white btn bsb-btn-2xl bg-warning rounded-pill mt-5 mt-xl-10">Our Projects</a>
+        <a href="{% url 'generals:services' %}" class="Coloryellowblack btn bsb-btn-2xl rounded-pill mt-5 mt-xl-10">Our Services</a>
+        <a href="{% url 'generals:projects' %}" class="Coloryellowblack btn bsb-btn-2xl rounded-pill mt-5 mt-xl-10">Our Projects</a>
     </div>
   </div>
 {% endblock content %}

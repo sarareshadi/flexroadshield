@@ -13,28 +13,28 @@
 <div class="container text-center">
   <div class="row">
     <h1> Blog </h1>
-<section class="bsb-blog-5 py-3 py-md-5 py-xl-8 text-white bg-light">
+<section class="bsb-blog-5 py-3 py-md-5 py-xl-8 Coloryellowblack">
   <div class="container overflow-hidden">
     <div class="row column-gap-3 gy-4 gy-md-5 gx-xl-6 gy-xl-6 gx-xxl-9 gy-xxl-9 d-flex justify-content-center ">
       {% for post in posts %}
-      <div class="col-12 col-lg-3 bg-warning ">
+      <div class="col-12 col-lg-3 border rounded Bglight">
         <article>
-          <div class="card border-0 bg-transparent">
+          <div class="card card-0 border-0 bg-transparent">
             <figure class="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
               <a href="{% url 'blog:blogdetails' post.slug %}">
                 <img class="img-fluid bsb-scale bsb-hover-scale-up w-100 mx-auto p-2" loading="lazy" src="{{ post.image.url }}">
               </a>
             </figure>
-            <div class="card-body m-0 p-0 ">
+            <div class="card-body m-0 p-0 Bglight">
               <div class="entry-header mb-3">
-                <h3 class="card-title entry-title h4 m-0">
-                  <a class="link-dark text-white text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
+                <h3 class="card-title entry-title h4 m-0 pb-4">
+                  <a class="text-decoration-none" href="{% url 'blog:blogdetails' post.slug %}">{{ post.title }}</a>
                 </h3>
-                <p class="text-light">{{ post.text|truncatechars:100 }}</p>
+                <p class="">{{ post.text|truncatechars:100 }}</p>
               </div>
             </div>
-            <div class="card-footer border-0 bg-transparent p-0 m-0">
-              <p class="text-light date">Published {{ post.published_date }}</p>
+            <div class="card-footer border-0 bg-transparent m-0 Bglight pt-2">
+              <p class=" date text-muted"><small>Published {{ post.published_date }}</small></p>
             </div>
           </div>
         </article>
@@ -47,19 +47,19 @@
 </section>
   </div>
 </div>
-  <div class="container py-4">
-    <div class="row">
+  <div class="container py-4 mb-5">
+    <div class="row text-center">
       <div class="col text-center">
         {% if posts.has_previous %}
-        <a href="?page=1" class="btn bsb-btn-2xl btn-warning rounded-pill mt-xl-10">&laquo; First</a>
-        <a href="?page={{ posts.previous_page_number }}" class="btn bsb-btn-2xl btn-warning rounded-pill mt-xl-10">  Previous</a>
+        <a href="?page=1" class="btn bsb-btn-2xl Coloryellowblack rounded-pill mt-xl-10">&laquo; First</a>
+        <a href="?page={{ posts.previous_page_number }}" class="btn bsb-btn-2xl Coloryellowblack rounded-pill mt-xl-10">  Previous</a>
         {% endif %}
-        <span class="current">
+        <span class="current px-2">
           Page {{ posts.number }} of {{ posts.paginator.num_pages }}
         </span>
         {% if posts.has_next %}
-        <a href="?page={{ posts.next_page_number}}" class="btn bsb-btn-2xl btn-warning rounded-pill mt-xl-10"><span>Next Page</span></a>
-        <a href="?page={{ posts.paginator.num_pages }}" class="btn bsb-btn-2xl btn-warning rounded-pill mt-xl-10">Last &raquo;</a>
+        <a href="?page={{ posts.next_page_number}}" class="btn bsb-btn-2xl Coloryellowblack rounded-pill mt-xl-10"><span>Next Page</span></a>
+        <a href="?page={{ posts.paginator.num_pages }}" class="btn bsb-btn-2xl Coloryellowblack rounded-pill mt-xl-10">Last &raquo;</a>
         {% endif %}
     </div>
   </div>
