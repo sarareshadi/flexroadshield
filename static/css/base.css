@@ -2,8 +2,44 @@ body {
     background-color: #000000;
     padding: 0;
     margin: 0;
-    color: #fcbb21;
+    color: #f8cb58;
 }
+
+.container-s {
+    position: relative;
+}
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.Bglight {
+    background-color: #f7f7f7 ;
+    color: #000000;
+}
+
+.Bglight a {
+    color: #000000;
+}
+
+.Bglight a:hover {
+    color: #696965;
+    }
+
+.Coloryellowblack {
+    background-color: #f8cb58;
+    color: #000000;
+}
+
+.Coloryellowblack a {
+    color: #000000;
+}
+
+.Coloryellowblack a:hover {
+    color: #696965;
+    }
+
 
 .container-s {
     position: relative;        
@@ -14,16 +50,8 @@ body {
     top: 50px;
 }
 
-
-.navbar-custom {
-    background-color: #fcbb21;
-}
-
 .footer-custom {
-    background-color: #fcbb21;
-    position: fixed;
-	width: 100%;
-	bottom: -100px;
+	bottom: -22%;
 	display: block;
     transition: bottom 0.6s;
 }
@@ -33,8 +61,41 @@ body {
 }
 
 .footer-custom a{
-    background-color: #fcbb21;
     margin-right: 20px;
-    color: rgb(244, 248, 253);
     text-decoration: none;
 }
+
+.footer-custom {
+    bottom: -22%;
+    display: block;
+    transition: bottom 0.6s;
+    }
+    
+.footer-custom:hover {
+    bottom: 0;
+    }
+    
+.footer-custom a {
+    margin-right: 20px;
+    text-decoration: none;
+    }
+
+/* Media query for tablets (including iPad) */
+@media only screen and (max-width: 1024px) {
+    .footer-custom {
+    bottom: -11%;
+    }
+    }
+    
+/* Media query for phones */
+@media only screen and (max-width: 767px) {
+    .footer-custom {
+    bottom: -27%;
+    }
+    }   
+    
+@media only screen and (max-width: 376px) {
+        .footer-custom {
+        bottom: -36%;
+        }
+        }        

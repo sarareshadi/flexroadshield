@@ -1,11 +1,13 @@
 
- <nav class="navbar navbar-expand-lg row justify-content-md-center p-5 mb-2 font-weight-bold me-auto mb-2 mb-lg-0 navbar-custom">
-    <div class="container-fluid ">
-      <a class="navbar-brand nav-link" style="color: white;" href="#">FlexRoadShield</a>
+{% load static %}
+ <nav class="navbar navbar-expand-lg row justify-content-md-center p-5 mb-2 me-auto mb-2 mb-lg-0 Coloryellowblack" >
+    <div class="container-fluid">
+      <img src="{% static 'images/Logo-FRS.png' %}" class="logo" alt="flex road shield logo" width="35px" height="auto">
+      <a class="navbar-brand nav-link" style="padding-left:30px" href="{% url 'generals:home' %}">FlexRoadShield</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mx-auto mb-5 mb-lg-0">
           <li class="nav-item">
             <a href="{% url 'generals:home' %}" class="nav-link">HOME</a>
@@ -23,15 +25,7 @@
             <a href="{% url 'blog:blog_home' %}" class="nav-link">BLOG</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'contacts:contacts' %}" class="nav-link">CONTACT US</a>
+            <a href="{% url 'contacts:contacts' %}" class="nav-link color-navfooter">CONTACT US</a>
           </li>
-
-        {% comment %}
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        {% endcomment %}
-      </div>
     </div>
   </nav>
