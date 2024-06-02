@@ -7,14 +7,14 @@
 
 {% block content %}
 <div class="container">
-    <div class="row mt-4 text-center">
+    <div class="row mt-5 text-center">
         <h1 class="">{% trans '404 Error!' %}</h1>
     </div> 
 
     <div class="row mt-5 p-5 Coloryellowblack">
-        <div class="col-md-12 rounded Bglight text-center">
+        <div class="col-md-12 rounded Bglight text-center pt-5 mt-5">
             <h2 class="center">{% trans 'Oops! There is nothing here!' %}</h2>
-            <a href="{% url 'generals:home' %}" class="btn link-light my-5 ">{% trans 'Home' %}</a>
+            <a href="{% url 'generals:home' %}" class="btn Coloryellowblack my-5">{% trans 'Home' %}</a>
         </div>
     </div>
 </div>
